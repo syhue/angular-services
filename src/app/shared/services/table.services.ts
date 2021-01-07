@@ -19,53 +19,68 @@ export class TableService {
 }
 
 export interface TableItem {
+    id: number;
     name: string;
     email: string;
     status: string;
+    details: string; 
   }
 
 
-
 const EXAMPLE_DATA: TableItem[] = [
-    {
-      name: "Calvin Rittmeyer",
-      email: "crittmeyer0@zimbio.com",
-      status: userStatus[1],
+    {  
+        id: 1,
+        name: "Calvin Rittmeyer",
+        email: "crittmeyer0@zimbio.com",
+        status: userStatus[1],
+        details: 'Having no hair made him look even hairier.'
     },
   
     {
-      name: "Madelene Pellew",
-      email: "mpellew1@gmail.my",
-      status: userStatus[0],
+        id: 2,
+        name: "Madelene Pellew",
+        email: "mpellew1@gmail.my",
+        status: userStatus[0],
+        details: 'There\'s a reason that roses have thorns.'
     },
   
     {
-      name: "Heinrick Wedgwood",
-      email: "hwedgwood9@discovery.com",
-      status: userStatus[1],
+        id: 3,
+        name: "Heinrick Wedgwood",
+        email: "hwedgwood9@discovery.com",
+        status: userStatus[1],
+        details: 'It was getting dark, and we weren’t there yet.'
     },
   
     {
-      name: "Alfy Valder",
-      email: "avalder8@typepad.com",
-      status: userStatus[1],
+        id: 4,
+        name: "Alfy Valder",
+        email: "avalder8@typepad.com",
+        status: userStatus[1],
+        details: 'There are no heroes in a punk rock band.'
     },
   
     {
-      name: "Theodore Cawthery",
-      email: "tcawthery2@cornell.edu",
-      status: userStatus[1],
+        id: 5,
+        name: "Theodore Cawthery",
+        email: "tcawthery2@cornell.edu",
+        status: userStatus[1],
+        details: 'The paintbrush was angry at the color the artist chose to use.'
     },
     {
-      name: "Prent",
-      email: "pmilstead1@scribd.com",
-      status: userStatus[0],
+        id: 6,
+        name: "Prent",
+        email: "pmilstead1@scribd.com",
+        status: userStatus[0],
+        details: 'Nothing seemed out of place except the washing machine in the bar.'
     },
   
     {
-      name: "Helaina",
-      email: "htuck3@barnesandnoble.com",
-      status: userStatus[0],
+        id: 7,
+        name: "Helaina",
+        email: "htuck3@barnesandnoble.com",
+        status: userStatus[0],
+        details: 'The irony of the situation wasn\'t lost on anyone in the room.'
     }
   ];
 
@@ -124,8 +139,7 @@ private getSortedData(data: TableItem[]) {
     return data.sort((a, b) => {
     const isAsc = this.sort.direction === 'asc';
     switch (this.sort.active) {
-        case 'name': return compare(a.name, b.name, isAsc);
-        case 'id': return compare(+a.email, +b.email, isAsc);
+        case 'id': return compare(+a.id, +b.id, isAsc);
         default: return 0;
     }
     });

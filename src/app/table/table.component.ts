@@ -18,7 +18,7 @@ export class TableComponent implements AfterViewInit, OnInit {
   dataSource: TableDataSource;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['name', 'email', 'status'];
+  displayedColumns = ['id','name', 'email', 'status'];
 
   ngOnInit() {
     this.dataSource = new TableDataSource();

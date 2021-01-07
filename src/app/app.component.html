@@ -3,10 +3,15 @@
   <h3>Services!</h3>
 
     <div class="main-content">
-        <button mat-raised-button (click)="onShowTable()">Click Me</button>
+        <button mat-raised-button (click)="onShowTable()"><a routerLink="">Click Me</a></button>
         <br>
         <div *ngIf = "isTableShow"> 
           <app-table></app-table>
+          <br>
+          <br>
+          <h3>User Details</h3>
+          <router-outlet></router-outlet>
         </div>
     </div>
 </body>  
+
