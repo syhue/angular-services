@@ -1,0 +1,12 @@
+<body>
+  <h1>Hello, this is my third task!</h1>
+  <h3>Services!</h3>
+
+    <div class="main-content">
+        <button mat-raised-button (click)="onShowTable()">Click Me</button>
+        <br>
+        <div *ngIf = "isTableShow"> 
+          <app-table></app-table>
+        </div>
+    </div>
+</body>  
