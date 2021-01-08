@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { TableService, TableItem ,TableDataSource} from '../../app/shared/services/table.services';
-import { AfterViewInit, ViewChild } from '@angular/core';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
-import { MatTable } from '@angular/material/table';
+import { TableService} from '../../app/shared/services/table.services';
+
 
 @Component({
   selector: 'app-user-details',
@@ -14,18 +11,26 @@ import { MatTable } from '@angular/material/table';
 })
 export class UserDetailsComponent implements OnInit {
 
-   id: number;
+  User: any[];
+  id: number;
+  UserDetails;
+  
 
-  constructor(private route: ActivatedRoute) { 
+  constructor(private route: ActivatedRoute,
+    private TableService: TableService,) { 
     
   }
-
-
+  
   ngOnInit() {
     this.route.params.subscribe(params => {
-      this.id = +params['id']; 
-   });
-    }
+    this.id = +params['id']; 
+    this.User = this.TableService.getEvents() ;//how to call the details from table?
+    this.User.filter( item => item.id === this.id);
+    this.UserDetails= this.User[this.id-1];
+  });
+  
+}
+
 }
 
 

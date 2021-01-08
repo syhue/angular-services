@@ -1,17 +1,10 @@
 <body>
-  <h1>Hello, this is my third task!</h1>
-  <h3>Services!</h3>
-
-    <div class="main-content">
-        <button mat-raised-button (click)="onShowTable()"><a routerLink="">Click Me</a></button>
-        <br>
-        <div *ngIf = "isTableShow"> 
-          <app-table></app-table>
-          <br>
-          <br>
-          <h3>User Details</h3>
-          <router-outlet></router-outlet>
-        </div>
-    </div>
+  <div class="main-content">
+    <h1>Hello, this is my fourth task!</h1>
+    <h3>Routing!</h3>
+      <br>
+      <app-table></app-table>
+      <br>
+      <router-outlet></router-outlet>
+  </div>
 </body>  
-

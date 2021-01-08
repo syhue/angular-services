@@ -9,14 +9,9 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatButtonModule } from '@angular/material/button';
-import { Routes, RouterModule} from '@angular/router';
 import { UserDetailsComponent } from './user-details/user-details.component';
-import { ActivatedRoute } from '@angular/router';
 
-const appRoutes: Routes = [
-  
-  { path: 'user-details/:id', component: UserDetailsComponent },
-]
+
 
 
 @NgModule({
@@ -33,7 +28,6 @@ const appRoutes: Routes = [
     MatPaginatorModule,
     MatSortModule,
     MatButtonModule,
-    RouterModule.forRoot(appRoutes),
     HttpClientModule,
   ],
   providers: [],

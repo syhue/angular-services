@@ -5,6 +5,7 @@ import { MatTable } from '@angular/material/table';
 import { TableDataSource, TableItem } from '../../app/shared/services/table.services';
 import { TableService } from '../../app/shared/services/table.services';
 
+
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
@@ -23,6 +24,13 @@ export class TableComponent implements AfterViewInit, OnInit {
   ngOnInit() {
     this.dataSource = new TableDataSource();
   }
+  
+  isTableShow: boolean = false;
+
+  onShowTable() {
+    this.isTableShow = true;
+  }
+
 
   ngAfterViewInit() {
     this.dataSource.sort = this.sort;
@@ -30,3 +38,4 @@ export class TableComponent implements AfterViewInit, OnInit {
     this.table.dataSource = this.dataSource;
   }
 }
+
