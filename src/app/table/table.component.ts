@@ -24,12 +24,6 @@ export class TableComponent implements AfterViewInit, OnInit {
   ngOnInit() {
     this.dataSource = new TableDataSource();
   }
-  
-  isTableShow: boolean = false;
-
-  onShowTable() {
-    this.isTableShow = true;
-  }
 
 
   ngAfterViewInit() {

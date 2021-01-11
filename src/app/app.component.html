@@ -3,7 +3,11 @@
     <h1>Hello, this is my fourth task!</h1>
     <h3>Routing!</h3>
       <br>
-      <app-table></app-table>
+      <button mat-raised-button 
+        (clicked)="isTableShow!=isTableShow"
+        [routerLink]="['/index']"
+        >Click Me</button>
+      <!-- <app-table></app-table> -->
       <br>
       <router-outlet></router-outlet>
   </div>
