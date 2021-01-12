@@ -10,15 +10,21 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatButtonModule } from '@angular/material/button';
 import { UserDetailsComponent } from './user-details/user-details.component';
-
-
-
+import { CommonModule } from '@angular/common';
+import { ShortenPipe } from './shared/pipes/shorten.pipe';
+import { FilterPipe } from './shared/pipes/filter.pipe';
+import { ListComponent } from './list/list.component';
+import {MatListModule} from '@angular/material/list';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     TableComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    ShortenPipe,
+    FilterPipe,
+    ListComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +35,9 @@ import { UserDetailsComponent } from './user-details/user-details.component';
     MatSortModule,
     MatButtonModule,
     HttpClientModule,
+    CommonModule,
+    MatListModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

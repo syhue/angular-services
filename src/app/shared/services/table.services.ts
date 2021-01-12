@@ -71,7 +71,7 @@ const EXAMPLE_DATA: TableItem[] = [
     },
     {
         id: 6,
-        name: "Prent",
+        name: "Elliott Camilo",
         email: "pmilstead1@scribd.com",
         status: userStatus[0],
         details: 'Nothing seemed out of place except the washing machine in the bar.'
@@ -79,7 +79,7 @@ const EXAMPLE_DATA: TableItem[] = [
   
     {
         id: 7,
-        name: "Helaina",
+        name: "Ulisses Villads",
         email: "htuck3@barnesandnoble.com",
         status: userStatus[0],
         details: 'The irony of the situation wasn\'t lost on anyone in the room.'

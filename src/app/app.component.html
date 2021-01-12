@@ -1,14 +1,18 @@
 <body>
   <div class="main-content">
-    <h1>Hello, this is my fourth task!</h1>
-    <h3>Routing!</h3>
+    <h1>{{ intro  }}</h1>
+    <h3>{{ description }} </h3>
+    <h3><strong>Today date is {{ today | date | uppercase}}.</strong></h3>
       <br>
       <button mat-raised-button 
         (clicked)="isTableShow!=isTableShow"
         [routerLink]="['/index']"
         >Click Me</button>
-      <!-- <app-table></app-table> -->
+      <br>
       <br>
       <router-outlet></router-outlet>
+      <br>
+      <hr>
+      <app-list></app-list>
   </div>
 </body>  
