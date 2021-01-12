@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'task-day3';
+  title = 'My Tasks';
   isTableShow: boolean = false;
   intro: string = 'Hello, this is my task!';
   description: string = 'I learnt on Pipe at Jan 2021.';

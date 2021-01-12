@@ -1,0 +1,25 @@
+
+<body>
+    <h1>Hi, Welcome back!</h1>
+    <div class="flex-container">
+        <div>
+            <mat-list>
+                <mat-list-item>Email:</mat-list-item>
+                <mat-list-item>Password:</mat-list-item>
+            </mat-list>
+        </div>
+        
+        <div >
+            <mat-list>
+                <mat-list-item><input type="email" [(ngModel)]="email"></mat-list-item>
+                <mat-list-item><input type="password" [(ngModel)]="password"></mat-list-item>
+            </mat-list>
+        </div>        
+    </div>
+    <br>
+    <div><button 
+        mat-raised-button 
+        type="submit"
+        (click) = "onLogin()"
+        >Login</button></div>
+</body>

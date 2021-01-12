@@ -3,7 +3,7 @@
 <input type="text" [(ngModel)]="filtered" placeholder="Male">
 <mat-list>
     <mat-list-item 
-        *ngFor="let item of namelist "
+        *ngFor="let item of namelist | filter: filtered "
         >{{ item.name}}
     </mat-list-item>
 </mat-list>

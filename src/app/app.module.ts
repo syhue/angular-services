@@ -16,6 +16,8 @@ import { FilterPipe } from './shared/pipes/filter.pipe';
 import { ListComponent } from './list/list.component';
 import {MatListModule} from '@angular/material/list';
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { FormsModule } from '@angular/forms';
     ShortenPipe,
     FilterPipe,
     ListComponent,
+    LoginComponent,
+    MainComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,21 @@
+.flex-container {
+    display: flex;
+    flex-direction: row;
+}
+
+body {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+input{
+    padding: 0.2rem;
+    font: 0.9rem sans-serif;
+    border: grey solid 2px;
+    border-radius: 5px;
+    width: 10rem;
+}
+
