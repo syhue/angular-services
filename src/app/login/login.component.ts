@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
-import { ɵangular_packages_platform_browser_platform_browser_d } from '@angular/platform-browser';
 
 
+
+const newLocal = "DeviceType";
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -10,31 +11,49 @@ import { ɵangular_packages_platform_browser_platform_browser_d } from '@angular
 })
 export class LoginComponent implements OnInit {
 
+  link: any = ['/index'];
 
 
-  constructor(private http: HttpClient) { 
-    // if (this.email.length > 0) {
-    //   this.canSubmit = true;
-    // }
-  }
-
-  ngOnInit(): void {
+  constructor(private http: HttpClient) {
 
   }
 
-  onLogin(postData: { email: string; password: string}) {
-    // Send Http request
+  ngOnInit() { 
+  }
+
+  onFetchPosts() {
+    this.fetchPosts();
+  }
+
+  onLogin(value: any) {
+    debugger
+    let postData = { Username : value.username, Password: value.password, Device: {DeviceType: 3, DeviceId: "Chrome-3000", RegistrationID:"3000",
+    GuiVersion:"1.0.0"} }
     this.http
-      .post(
-        'https://ng-complete-guide-9faaa-default-rtdb.firebaseio.com/',
-        postData
-      )
-
-      .subscribe(responseData => {
-        console.log(responseData)
-      });     
-
+    .post('https://agmotemplate-api-staging.azurewebsites.net/v1/accounts/login', postData)
+    .subscribe(responseData => {
+      console.log(responseData);
+    });
   }
 
+  private fetchPosts() {
+    this.http
+    .get('https://www.getpostman.com/collections/a0341285167ec57c13a9/v1/accounts/me')
+    .subscribe(posts => {
+      console.log(posts);
+  
+
+    });
+
+   
+  }
 
 }
+
+  
+
+
+
+
+
+

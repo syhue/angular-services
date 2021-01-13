@@ -18,6 +18,7 @@ import {MatListModule} from '@angular/material/list';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
+import { TableService } from './shared/services/table.services';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,7 @@ import { MainComponent } from './main/main.component';
     MatListModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [TableService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
