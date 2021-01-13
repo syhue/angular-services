@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ListComponent } from './list/list.component';
 import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
-import { TableComponent } from './table/table.component';
 import { UserDetailsComponent } from './user-details/user-details.component'
+
 
 
 const appRoutes: Routes = [

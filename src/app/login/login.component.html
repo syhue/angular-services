@@ -1,22 +1,35 @@
 
 <body>
     <h1>Hi, Welcome back!</h1>
-    <div class="flex-container">
-        <form #postForm="ngForm" (ngSubmit)="onLogin(postForm.value)">
-        <div>
-            <mat-list>
-                <mat-list-item>username:<input type="string" name="username" required ngModel></mat-list-item>
-                <mat-list-item>password:<input type="string" name="password" required ngModel></mat-list-item>
-                
-            </mat-list>
+    <div class="big-flex-container">
+        <div class="flex-container">
+            <form #postForm="ngForm" (ngSubmit)="onLogin(postForm.value)">
+            <div>
+                <mat-list>
+                    <mat-list-item>username:<input type="string" name="username" required ngModel></mat-list-item>
+                    <mat-list-item>password:<input type="password" name="password" required ngModel></mat-list-item>
+                </mat-list>
+            </div>
+            <div><button mat-raised-button type="submit">POST</button></div>
+            <br>
+            </form>        
+            
+            <div><button mat-raised-button (click)="onGetData()" >GET</button></div>
+            <br>
+            <div><button mat-raised-button (click)="onViewData()" >View</button></div>
+            <br>
         </div>
-        
-
-        <div><button mat-raised-button type="submit">POST</button></div>
         <br>
-        <div><button mat-raised-button (click)="onGetData()">GET</button></div>
-        </form>        
+        <div class="left-container" *ngIf="isDataShow">
+            <p>id: {{ data.id }}</p>
+            <p>Phone Numner: {{ data.phoneNumber }}</p>
+            <p>Full Name: {{ data.fullName }}</p>
+            <p>Nickname: {{ data.nickname }}</p>
+            <p>Gender: {{ data.gender }}</p>
+            <p>IsActive: {{ data.isActive }}</p>
+            <p>Last Login Date: {{ data.lastLoginDate }}</p>
+            <p>Registered Date: {{ data.registeredDate }}</p>
+        </div>
+
     </div>
-    
-    
 </body>

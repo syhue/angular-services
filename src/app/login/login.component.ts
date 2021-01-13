@@ -13,8 +13,9 @@ const newLocal = "DeviceType";
 })
 export class LoginComponent implements OnInit {
 
-  link: any = ['/index'];
-
+  link: any = ['/main'];
+  data: any;
+  isDataShow: boolean = false;
 
 
 
@@ -23,7 +24,9 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() { 
+    this.onGetData();
 
+    
   }
 
   onLogin(postData: any){
@@ -33,6 +36,14 @@ export class LoginComponent implements OnInit {
   onGetData() {
     this.authService.GetData();
   }
+
+  onViewData() {
+    this.data = this.authService.Data;
+    console.log(this.data);
+    this.isDataShow = true;
+
+  }
+
 
 
 

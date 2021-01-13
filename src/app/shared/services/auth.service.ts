@@ -4,28 +4,33 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class AuthService {
-  tokenTwo: any;
+
+  Data: any;
+  happy = 123;
+ 
   httpHeaders: HttpHeaders ;
 
   constructor( private http: HttpClient) {
     
    }
 
-
-
    GetData() {
-    this.tokenTwo = localStorage.getItem("tokenTwo");
-    this.httpHeaders = new HttpHeaders({
-      Authorization: ('Bearer '+ this.tokenTwo),
-    });
-    console.log(this.httpHeaders);
+    
+    let tokenTwo = localStorage.getItem("token");
     this.http
-    .get('https://agmotemplate-api-staging.azurewebsites.net/admin/v1/accounts/me', { headers: this.httpHeaders})
+    .get('https://agmotemplate-api-staging.azurewebsites.net/admin/v1/accounts/me', 
+    {
+      headers: new HttpHeaders({'Authorization': 'Bearer '+ tokenTwo})
+    })
+
     .subscribe(responseData => {
     console.log(responseData);
-    })
+    this.Data = responseData;
+    // console.log(this.Data);
+    return this.Data;
+    });
     
     
-
+    
   }
 }

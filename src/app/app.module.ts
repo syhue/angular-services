@@ -34,6 +34,7 @@ import { AuthService } from './shared/services/auth.service';
     ListComponent,
     LoginComponent,
     MainComponent,
+    
   ],
 
   imports: [
