@@ -28,7 +28,6 @@ export class LoginComponent implements OnInit {
 
   onLogin(postData: any){
     this.postsService.createAndStorePost(postData);
-    this.authService.ExtractLocalStorage(postData);
   }
 
   onGetData() {
