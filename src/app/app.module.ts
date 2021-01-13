@@ -19,6 +19,10 @@ import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
 import { TableService } from './shared/services/table.services';
+import { StorageService } from './shared/services/storage.service';
+import { AuthService } from './shared/services/auth.service';
+
+
 
 @NgModule({
   declarations: [
@@ -31,6 +35,7 @@ import { TableService } from './shared/services/table.services';
     LoginComponent,
     MainComponent,
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -44,7 +49,8 @@ import { TableService } from './shared/services/table.services';
     MatListModule,
     FormsModule,
   ],
-  providers: [TableService],
+  providers: [TableService, StorageService, AuthService],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
