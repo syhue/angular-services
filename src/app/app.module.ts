@@ -13,7 +13,7 @@ import { UserDetailsComponent } from './components/user-details/user-details.com
 import { CommonModule } from '@angular/common';
 import { ShortenPipe } from './shared/pipes/shorten.pipe';
 import { FilterPipe } from './shared/pipes/filter.pipe';
-import { ListComponent } from './components/list/list.component';
+import { ListComponent } from './components/user-list/user-list.component';
 import {MatListModule} from '@angular/material/list';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
@@ -21,6 +21,7 @@ import { MainComponent } from './components/main/main.component';
 import { TableService } from './shared/services/table.services';
 import { StorageService } from './shared/services/storage.service';
 import { AuthService } from './shared/services/auth.service';
+import { DataListComponent } from './components/data-list/data-list.component';
 
 
 
@@ -34,6 +35,7 @@ import { AuthService } from './shared/services/auth.service';
     ListComponent,
     LoginComponent,
     MainComponent,
+    DataListComponent,
     
   ],
 

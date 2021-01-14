@@ -16,20 +16,14 @@
             
             <div><button mat-raised-button (click)="onGetData()" >GET</button></div>
             <br>
-            <div><button mat-raised-button (click)="onViewData()" >View</button></div>
+            <div><button mat-raised-button [routerLink]="['/data-list']" >View</button></div>
             <br>
         </div>
         <br>
-        <div class="left-container" *ngIf="isDataShow">
-            <p>id: {{ data.id }}</p>
-            <p>Phone Numner: {{ data.phoneNumber }}</p>
-            <p>Full Name: {{ data.fullName }}</p>
-            <p>Nickname: {{ data.nickname }}</p>
-            <p>Gender: {{ data.gender }}</p>
-            <p>IsActive: {{ data.isActive }}</p>
-            <p>Last Login Date: {{ data.lastLoginDate }}</p>
-            <p>Registered Date: {{ data.registeredDate }}</p>
+        <div *ngIf = "error">
+            <p>{{ error }}</p>
         </div>
+
 
     </div>
 </body>

@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class PostsService {
 
   tokenOne: any;
-  
+  error : any;
 
   constructor( private http: HttpClient) {}
 
@@ -17,11 +17,17 @@ export class PostsService {
     GuiVersion:"1.0.0"} }
     this.http
     .post('https://agmotemplate-api-staging.azurewebsites.net/admin/v1/accounts/login', postData)
-    .subscribe(responseData => {
-    this.tokenOne = responseData["accessToken"] ;
-    localStorage.setItem("token", this.tokenOne);
-    return this.tokenOne
-    });
+    .subscribe(
+      responseData => {
+      this.tokenOne = responseData["accessToken"] ;
+      localStorage.setItem("token", this.tokenOne);
+      return this.tokenOne;
+      },
+      errors => { 
+        // console.log(error["message"])
+        this.error = errors.message;
+      },
+    );
 
   } 
 

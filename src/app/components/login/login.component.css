@@ -1,5 +1,3 @@
-
-
 body {
     display:flex;
     flex-direction: column;
@@ -29,5 +27,4 @@ form, .flex-container{
     position: absolute;
     top: 40%;
     left: 10%;
-
 }

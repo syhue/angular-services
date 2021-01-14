@@ -15,38 +15,20 @@ export class LoginComponent implements OnInit {
 
   link: any = ['/main'];
   data: any;
-  isDataShow: boolean = false;
+  error: string = null; 
 
+  constructor(private postsService: PostsService, private authService: AuthService) { }
 
-
-  constructor(private postsService: PostsService, private authService: AuthService) {
-
-  }
-
-  ngOnInit() { 
-    this.onGetData();
-
-    
-  }
+  ngOnInit() {}
 
   onLogin(postData: any){
     this.postsService.createAndStorePost(postData);
+    this.error = this.postsService.error;
   }
 
   onGetData() {
     this.authService.GetData();
   }
-
-  onViewData() {
-    this.data = this.authService.Data;
-    console.log(this.data);
-    this.isDataShow = true;
-
-  }
-
-
-
-
 }
 
   
