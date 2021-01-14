@@ -2,8 +2,8 @@ import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
-import { TableDataSource, TableItem } from '../../app/shared/services/table.services';
-import { TableService } from '../../app/shared/services/table.services';
+import { TableDataSource, TableItem } from '../../shared/services/table.services';
+import { TableService } from '../../shared/services/table.services';
 
 
 @Component({

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { TableService} from '../../app/shared/services/table.services';
+import { TableService} from '../../shared/services/table.services';
 
 
 @Component({

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../../app/shared/services/auth.service';
-import { StorageService } from '../../app/shared/services/storage.service';
-import { PostsService } from '../shared/services/posts.service';
+import { AuthService } from '../../shared/services/auth.service';
+import { StorageService } from '../../shared/services/storage.service';
+import { PostsService } from '../../shared/services/posts.service';
 
 
 const newLocal = "DeviceType";
