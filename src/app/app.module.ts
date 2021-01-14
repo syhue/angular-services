@@ -17,7 +17,7 @@ import { ListComponent } from './components/list/list.component';
 import {MatListModule} from '@angular/material/list';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
-import { MainComponent } from './main/main.component';
+import { MainComponent } from './components/main/main.component';
 import { TableService } from './shared/services/table.services';
 import { StorageService } from './shared/services/storage.service';
 import { AuthService } from './shared/services/auth.service';
