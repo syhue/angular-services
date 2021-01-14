@@ -3,6 +3,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: #fffffc;
 }
 
 .flex-container {
@@ -25,3 +26,4 @@ h1{
     font-weight: 600;
     text-decoration: underline;
 }
+

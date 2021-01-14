@@ -22,7 +22,7 @@ import { TableService } from './shared/services/table.services';
 import { StorageService } from './shared/services/storage.service';
 import { AuthService } from './shared/services/auth.service';
 import { DataListComponent } from './components/data-list/data-list.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -51,6 +51,7 @@ import { DataListComponent } from './components/data-list/data-list.component';
     CommonModule,
     MatListModule,
     FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [TableService, StorageService, AuthService],
 

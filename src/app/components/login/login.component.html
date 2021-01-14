@@ -16,11 +16,11 @@
             
             <div><button mat-raised-button (click)="onGetData()" >GET</button></div>
             <br>
-            <div><button mat-raised-button [routerLink]="['/data-list']" >View</button></div>
+            <!-- <div><button mat-raised-button [routerLink]="['/data-list']" >View</button></div> -->
             <br>
         </div>
         <br>
-        <div *ngIf = "error">
+        <div *ngIf = "showFormError">
             <p>{{ error }}</p>
         </div>
 
