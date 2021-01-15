@@ -3,6 +3,12 @@ p {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
     font-size:large;
-    margin-top: 5rem;;
+}
+
+body, .flex-container{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
 }
 

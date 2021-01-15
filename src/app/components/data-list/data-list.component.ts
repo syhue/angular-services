@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/shared/services/auth.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { AuthService } from 'src/app/shared/services/auth.service';
   styleUrls: ['./data-list.component.css']
 })
 export class DataListComponent implements OnInit {
-
+  Data: any;
   data_id: any; 
   data_phoneNumber: any; 
   data_fullName: any; 
@@ -17,19 +18,25 @@ export class DataListComponent implements OnInit {
   data_lastLoginDate: any; 
   data_registeredDate: any;
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService,private router: Router) { }
 
   ngOnInit(): void {
-    this.authService.ShowData();
-    this.data_id = this.authService.data_id;
-    this.data_phoneNumber = this.authService.data_phoneNumber;
-    this.data_fullName = this.authService.data_fullName;
-    this.data_nickname = this.authService.data_nickname;
-    this.data_gender = this.authService.data_gender;
-    this.data_isActive = this.authService.data_isActive;
-    this.data_lastLoginDate = this.authService.data_lastLoginDate;
-    this.data_registeredDate = this.authService.data_registeredDate;    
-  }
+   
+    this.authService.GetData()
+    .subscribe((responseData: any) => {
+      
+      this.Data = responseData;
+      this.data_id = this.Data["id"];
+      this.data_phoneNumber = this.Data["phoneNumber"];
+      this.data_fullName =  this.Data["fullName"];
+      this.data_nickname =  this.Data["nickname"];
+      this.data_gender = this.Data["gender"];
+      this.data_isActive = this.Data["isActive"];
+      this.data_lastLoginDate = this.Data["lastLoginDate"];
+      this.data_registeredDate = this.Data["registeredDate"];
+       
+  })
 }
 
+}
 

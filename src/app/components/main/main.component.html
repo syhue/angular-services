@@ -4,15 +4,11 @@
       <h3>{{ description }} </h3>
       <h3><strong>Today date is {{ today | date | uppercase}}.</strong></h3>
         <br>
-        <button mat-raised-button 
-          (clicked)="isTableShow!=isTableShow"
-   
-          >Click Me</button>
+        <button mat-raised-button [routerLink]="['/data-list']">Back</button>
         <br>
         <br>
-        
+        <app-table></app-table>
         <br>
-        <hr>
-        <app-list></app-list>
+        <router-outlet></router-outlet>
     </div>
   </body>  

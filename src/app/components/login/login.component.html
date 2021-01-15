@@ -4,25 +4,26 @@
     <div class="big-flex-container">
         <div class="flex-container">
             <form #postForm="ngForm" (ngSubmit)="onLogin(postForm.value)">
-            <div>
-                <mat-list>
-                    <mat-list-item>username:<input type="string" name="username" required ngModel></mat-list-item>
-                    <mat-list-item>password:<input type="password" name="password" required ngModel></mat-list-item>
-                </mat-list>
+            <div class = "flex-container">
+                <div class = "left-flex-container">
+                    <div><span>Username: </span></div>
+                    <br>
+                    <div><span>Password: </span></div>
+                </div>
+
+                <div class = "right-flex-container">
+                    <div><input type="string" name="username" required ngModel></div>
+                    <br>
+                    <div><input type="password" name="password" required ngModel></div>
+
+                </div>
             </div>
-            <div><button mat-raised-button type="submit">POST</button></div>
             <br>
+            <div><button mat-raised-button type="submit">Login</button></div>
             </form>        
-            
-            <div><button mat-raised-button (click)="onGetData()" >GET</button></div>
-            <br>
-            <!-- <div><button mat-raised-button [routerLink]="['/data-list']" >View</button></div> -->
-            <br>
         </div>
         <br>
-        <div *ngIf = "showFormError">
-            <p>{{ error }}</p>
-        </div>
+        <div *ngIf = "showFormError"><p>{{ error }}</p></div>
 
 
     </div>

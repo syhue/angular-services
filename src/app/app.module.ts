@@ -19,7 +19,6 @@ import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
 import { MainComponent } from './components/main/main.component';
 import { TableService } from './shared/services/table.services';
-import { StorageService } from './shared/services/storage.service';
 import { AuthService } from './shared/services/auth.service';
 import { DataListComponent } from './components/data-list/data-list.component';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -53,7 +52,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [TableService, StorageService, AuthService],
+  providers: [TableService, AuthService],
 
   bootstrap: [AppComponent]
 })

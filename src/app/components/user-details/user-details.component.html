@@ -1,1 +1,7 @@
-<p >User {{ + UserDetails.id}}:  {{UserDetails.details | shorten: 25}} </p>
+<body>
+    <div class="flex-container">
+        <p >User {{ + UserDetails.id}}:  {{UserDetails.details | shorten: 25}} </p>
+        <br>
+        <button mat-raised-button [routerLink] = "['/main']">Back</button>
+    </div>
+</body>

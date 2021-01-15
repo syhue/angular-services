@@ -13,18 +13,50 @@ input{
     border: grey solid 2px;
     border-radius: 5px;
     width: 10rem;
+
 }
+
 
 form, .flex-container{
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-  
 }
 
-.left-container{
+
+.flex-container{
+    flex-direction: row;
+}
+
+
+.left-flex-container, .right-flex-container{
+    margin: 1rem;
+}
+
+
+p{
+    text-align: center;
+    background-color: lightcoral;
+    padding: 1rem;
+    font-weight: 550;
+    color: white;
+    border: red 2px solid;
+    border-radius: 5px;
     position: absolute;
-    top: 40%;
-    left: 10%;
+    left: 40%;
+}
+
+
+span {
+    font-size: 18px;
+}
+
+
+h1{
+    font-size:xx-large;
+    margin: 2rem;
+    color: #1d3557;
+    font-weight: 580;
+    
 }
