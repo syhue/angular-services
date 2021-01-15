@@ -34,10 +34,7 @@ export class LoginComponent implements OnInit {
       password: [null, Validators.required],
     })
 
-    if (this.form.invalid) {
-      this.showFormError = true;
-      return;
-    }
+
   }
 
   onLogin(postData: any){
@@ -45,13 +42,18 @@ export class LoginComponent implements OnInit {
     .subscribe(
       data => {
         console.log(data);
-        
+        this.showFormError = false;
       },
       error => {
         console.log(error);
         this.error = error.message; 
       }
     )
+    if (this.form.invalid) {
+      this.showFormError = true;
+      return;
+    
+    }
   }
 
   onGetData() {
